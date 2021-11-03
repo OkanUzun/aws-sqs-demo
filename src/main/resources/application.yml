@@ -1,0 +1,16 @@
+cloud:
+  aws:
+    region:
+      static: us-east-2
+      auto: false
+    credentials:
+      access-key: ${AWS_CREDENTIALS_ACCESS_KEY}
+      secret-key: ${AWS_CREDENTIALS_SECRET_KEY}
+    destination:
+      name: spring-boot-demo
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
